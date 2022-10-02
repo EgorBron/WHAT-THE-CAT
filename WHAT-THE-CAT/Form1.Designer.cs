@@ -30,12 +30,13 @@
             this.rawImgRadioButton = new System.Windows.Forms.RadioButton();
             this.linkToImgRadioButton = new System.Windows.Forms.RadioButton();
             this.jsonImgRadioButton = new System.Windows.Forms.RadioButton();
-            this.jsonArrayImgRadioButton = new System.Windows.Forms.RadioButton();
+            this.jsonArrayImgBeforesRadioButton = new System.Windows.Forms.RadioButton();
             this.jsonPathInput = new System.Windows.Forms.TextBox();
             this.jsonPathLabel = new System.Windows.Forms.Label();
             this.buildButton = new System.Windows.Forms.Button();
             this.limitNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.limitLabel = new System.Windows.Forms.Label();
+            this.jsonArrayImgAftersRadioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.limitNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,26 +94,26 @@
             this.jsonImgRadioButton.AutoSize = true;
             this.jsonImgRadioButton.Location = new System.Drawing.Point(15, 113);
             this.jsonImgRadioButton.Name = "jsonImgRadioButton";
-            this.jsonImgRadioButton.Size = new System.Drawing.Size(79, 17);
+            this.jsonImgRadioButton.Size = new System.Drawing.Size(110, 17);
             this.jsonImgRadioButton.TabIndex = 3;
             this.jsonImgRadioButton.TabStop = true;
-            this.jsonImgRadioButton.Text = "JSON entry";
+            this.jsonImgRadioButton.Text = "JSON entry (plain)";
             this.jsonImgRadioButton.UseVisualStyleBackColor = true;
             // 
-            // jsonArrayImgRadioButton
+            // jsonArrayImgBeforesRadioButton
             // 
-            this.jsonArrayImgRadioButton.AutoSize = true;
-            this.jsonArrayImgRadioButton.Location = new System.Drawing.Point(15, 136);
-            this.jsonArrayImgRadioButton.Name = "jsonArrayImgRadioButton";
-            this.jsonArrayImgRadioButton.Size = new System.Drawing.Size(111, 17);
-            this.jsonArrayImgRadioButton.TabIndex = 3;
-            this.jsonArrayImgRadioButton.TabStop = true;
-            this.jsonArrayImgRadioButton.Text = "JSON entry (array)";
-            this.jsonArrayImgRadioButton.UseVisualStyleBackColor = true;
+            this.jsonArrayImgBeforesRadioButton.AutoSize = true;
+            this.jsonArrayImgBeforesRadioButton.Location = new System.Drawing.Point(15, 136);
+            this.jsonArrayImgBeforesRadioButton.Name = "jsonArrayImgBeforesRadioButton";
+            this.jsonArrayImgBeforesRadioButton.Size = new System.Drawing.Size(157, 17);
+            this.jsonArrayImgBeforesRadioButton.TabIndex = 3;
+            this.jsonArrayImgBeforesRadioButton.TabStop = true;
+            this.jsonArrayImgBeforesRadioButton.Text = "JSON entry (array, path first)";
+            this.jsonArrayImgBeforesRadioButton.UseVisualStyleBackColor = true;
             // 
             // jsonPathInput
             // 
-            this.jsonPathInput.Location = new System.Drawing.Point(11, 217);
+            this.jsonPathInput.Location = new System.Drawing.Point(11, 244);
             this.jsonPathInput.Name = "jsonPathInput";
             this.jsonPathInput.Size = new System.Drawing.Size(215, 20);
             this.jsonPathInput.TabIndex = 4;
@@ -121,7 +122,7 @@
             // jsonPathLabel
             // 
             this.jsonPathLabel.AutoSize = true;
-            this.jsonPathLabel.Location = new System.Drawing.Point(11, 201);
+            this.jsonPathLabel.Location = new System.Drawing.Point(11, 228);
             this.jsonPathLabel.Name = "jsonPathLabel";
             this.jsonPathLabel.Size = new System.Drawing.Size(203, 13);
             this.jsonPathLabel.TabIndex = 5;
@@ -131,7 +132,7 @@
             // buildButton
             // 
             this.buildButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buildButton.Location = new System.Drawing.Point(8, 243);
+            this.buildButton.Location = new System.Drawing.Point(8, 270);
             this.buildButton.Name = "buildButton";
             this.buildButton.Size = new System.Drawing.Size(215, 47);
             this.buildButton.TabIndex = 6;
@@ -141,7 +142,7 @@
             // 
             // limitNumericUpDown
             // 
-            this.limitNumericUpDown.Location = new System.Drawing.Point(12, 178);
+            this.limitNumericUpDown.Location = new System.Drawing.Point(12, 205);
             this.limitNumericUpDown.Name = "limitNumericUpDown";
             this.limitNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.limitNumericUpDown.TabIndex = 7;
@@ -149,23 +150,35 @@
             // limitLabel
             // 
             this.limitLabel.AutoSize = true;
-            this.limitLabel.Location = new System.Drawing.Point(15, 160);
+            this.limitLabel.Location = new System.Drawing.Point(15, 187);
             this.limitLabel.Name = "limitLabel";
             this.limitLabel.Size = new System.Drawing.Size(175, 13);
             this.limitLabel.TabIndex = 8;
             this.limitLabel.Text = "Limit (0 is infinite, negatives inverts):";
+           // 
+            // jsonArrayImgAftersRadioButton
+            // 
+            this.jsonArrayImgAftersRadioButton.AutoSize = true;
+            this.jsonArrayImgAftersRadioButton.Location = new System.Drawing.Point(15, 159);
+            this.jsonArrayImgAftersRadioButton.Name = "jsonArrayImgAftersRadioButton";
+            this.jsonArrayImgAftersRadioButton.Size = new System.Drawing.Size(162, 17);
+            this.jsonArrayImgAftersRadioButton.TabIndex = 3;
+            this.jsonArrayImgAftersRadioButton.TabStop = true;
+            this.jsonArrayImgAftersRadioButton.Text = "JSON entry (array, path after)";
+            this.jsonArrayImgAftersRadioButton.UseVisualStyleBackColor = true;
             // 
             // WtcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(235, 302);
+            this.ClientSize = new System.Drawing.Size(235, 327);
             this.Controls.Add(this.limitLabel);
             this.Controls.Add(this.limitNumericUpDown);
             this.Controls.Add(this.buildButton);
             this.Controls.Add(this.jsonPathLabel);
             this.Controls.Add(this.jsonPathInput);
-            this.Controls.Add(this.jsonArrayImgRadioButton);
+            this.Controls.Add(this.jsonArrayImgAftersRadioButton);
+            this.Controls.Add(this.jsonArrayImgBeforesRadioButton);
             this.Controls.Add(this.jsonImgRadioButton);
             this.Controls.Add(this.linkToImgRadioButton);
             this.Controls.Add(this.rawImgRadioButton);
@@ -190,12 +203,13 @@
         private System.Windows.Forms.RadioButton rawImgRadioButton;
         private System.Windows.Forms.RadioButton linkToImgRadioButton;
         private System.Windows.Forms.RadioButton jsonImgRadioButton;
-        private System.Windows.Forms.RadioButton jsonArrayImgRadioButton;
+        private System.Windows.Forms.RadioButton jsonArrayImgBeforesRadioButton;
         private System.Windows.Forms.TextBox jsonPathInput;
         private System.Windows.Forms.Label jsonPathLabel;
         private System.Windows.Forms.Button buildButton;
         private System.Windows.Forms.NumericUpDown limitNumericUpDown;
         private System.Windows.Forms.Label limitLabel;
+        private System.Windows.Forms.RadioButton jsonArrayImgAftersRadioButton;
     }
 }
 

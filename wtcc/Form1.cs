@@ -23,15 +23,18 @@ namespace wtcc {
             FormBorderStyle = FormBorderStyle.None;
             ShowInTaskbar = false;
             InitializeComponent();
-            var rnd = new Random();
-            Location = new Point(rnd.Next(0, Screen.PrimaryScreen.Bounds.X), rnd.Next(0, Screen.PrimaryScreen.Bounds.Y));
         }
 
         private void Form1_Activated(object sender, EventArgs e) {
             if (respType == 1) {
                 apiLink = Req();
-            } else if (respType == 2 || respType == 3) {
-                var d = Req().FromJson<Dictionary<string, object>>();
+            } else if (respType == 2 || respType == 3 || respType == 4) {
+                var r = Req();
+                Dictionary<string, object> d;
+                if (respType == 4) {
+                    var l = r.FromJson<Dictionary<string, object>[]>();
+                    d = l[new Random().Next(0, l.Length)];
+                } else d = r.FromJson<Dictionary<string, object>>();
                 if (d == null) return;
                 foreach (var str in jsonPath.Split(';')) {
                     var dd = d[str];
@@ -49,6 +52,9 @@ namespace wtcc {
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Size = Size = bmp.Size;
             pictureBox1.Image = bmp;
+            pictureBox1.Click += (_, __) => { };
+            var rnd = new Random();
+            Location = new Point(rnd.Next(0, Screen.PrimaryScreen.Bounds.X), rnd.Next(0, Screen.PrimaryScreen.Bounds.Y));
         }
     }
 }

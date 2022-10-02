@@ -28,12 +28,15 @@ namespace WHAT_THE_CAT {
                     linkToImgRadioButton.Checked ? 1 : 
                         (
                             jsonImgRadioButton.Checked ? 2 : 
-                                (jsonArrayImgRadioButton.Checked ? 3 : 4)
+                                (
+                                jsonArrayImgBeforesRadioButton.Checked ? 3 :
+                                    (jsonArrayImgAftersRadioButton.Checked ? 4 : 5)
+                                )
                         )
                 );
             if (limitNumericUpDown.Value < 0) limitNumericUpDown.Value = -limitNumericUpDown.Value;
             d.limit = (int)limitNumericUpDown.Value;
-            d.jsonPath = d.respType == 2 || d.respType == 3 ? jsonPathInput.Text : "";
+            d.jsonPath = d.respType == 2 || d.respType == 3 || d.respType == 4 ? jsonPathInput.Text : "";
             Console.WriteLine($"api: {d.apiLink}; resp type: {d.respType}; limit: {d.limit}; json: {d.jsonPath}");
 
             using (var module = AssemblyDefinition.ReadAssembly(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace(Path.GetFileName(System.Reflection.Assembly.GetExecutingAssembly().Location), "wtcc.exe"),
