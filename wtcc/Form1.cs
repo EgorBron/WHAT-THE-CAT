@@ -23,6 +23,8 @@ namespace wtcc {
             FormBorderStyle = FormBorderStyle.None;
             ShowInTaskbar = false;
             InitializeComponent();
+            var rnd = new Random();
+            Location = new Point(rnd.Next(0, Screen.PrimaryScreen.Bounds.X), rnd.Next(0, Screen.PrimaryScreen.Bounds.Y));
         }
 
         private void Form1_Activated(object sender, EventArgs e) {
