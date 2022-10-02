@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHAT-THE-CAT", "WHAT-THE-CAT\WHAT-THE-CAT.csproj", "{5E9ED341-51F3-4842-80E3-AA903E448C97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wtcc", "wtcc\wtcc.csproj", "{AF69610C-052C-49F4-816A-CD6ACEAE47DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5E9ED341-51F3-4842-80E3-AA903E448C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E9ED341-51F3-4842-80E3-AA903E448C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E9ED341-51F3-4842-80E3-AA903E448C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF69610C-052C-49F4-816A-CD6ACEAE47DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF69610C-052C-49F4-816A-CD6ACEAE47DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF69610C-052C-49F4-816A-CD6ACEAE47DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF69610C-052C-49F4-816A-CD6ACEAE47DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
